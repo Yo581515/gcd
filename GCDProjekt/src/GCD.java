@@ -5,7 +5,7 @@ public class GCD {
 	public static void main(String[] args) {
 
 		int a = 2_178_309;
-		int b = 3_524_578;
+		int b = 3_524_578   ;
 		int gcd = GCDMetode(a, b);
 
 		System.out.println("Stoorste Felles Divsor\ngcd(" + a + ", " + b + ") = " + gcd);
