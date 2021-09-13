@@ -3,11 +3,20 @@ public class GCD {
 
 	public static void main(String[] args) {
 
-		int a = 2_178_309;
-		int b = 3_524_578;
+		int a;
+		int b;
 
-//		int a = 1097;
-//		int b = 65537;
+		a = 2_178_309;
+		b = 3_524_578;
+
+//		a = 1_001_735_677;
+//		b = 1_006_662_301;
+//		a = 1_007_050_321;
+//		b = 1_009_101_133;
+//		a = 1_010_889_991;
+
+//		a = 1097;
+//		b = 65537;
 
 		int gcd = GCDMetode(a, b);
 
