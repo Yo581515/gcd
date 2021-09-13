@@ -3,12 +3,13 @@ public class GCD {
 
 	public static void main(String[] args) {
 
-		int a = 2_178_309;
-		int b = 3_524_578;
-		int gcd = GCDMetode(a, b);
+//		int a = 2_178_309;
+//		int b = 3_524_578;
 
-		System.out.println();
-		System.out.println("Stoorste Felles Divsor\ngcd(" + a + ", " + b + ") = " + gcd);
+		int a = 1097;
+		int b = 65537;
+
+		int gcd = GCDMetode(a, b);
 
 	}
 
@@ -19,14 +20,20 @@ public class GCD {
 		int rest = max;
 		int del;
 		while (rest != 0) {
-			String mellomrom1 = tallLengde(max);
-			String mellomrom2 = tallLengde(min);
+
 			del = max / min;
 			rest = max % min;
-			System.out.println(max + mellomrom1 + " = " + del + "*" + min + mellomrom2 + " + " + rest);
+			String mellomrom1 = tallLengde(max);
+			String mellomrom2 = tallLengde(min);
+			String mellomrom3 = tallLengde(del);
+
+			System.out.println(max + mellomrom1 + " = " + del + mellomrom3 + " * " + min + mellomrom2 + " + " + rest);
 			max = min;
 			min = rest;
 		}
+
+		System.out.println();
+		System.out.println("Stoorste Felles Divsor\ngcd(" + a + ", " + b + ") = " + max);
 
 		return max;
 	}
