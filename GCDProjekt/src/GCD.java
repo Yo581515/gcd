@@ -38,6 +38,29 @@ public class GCD {
 		return max;
 	}
 
+//	private static int inversMetode(int a, int b) {
+//		int max = Math.max(a, b);
+//		int min = Math.min(a, b);
+//		int rest = max;
+//		int del;
+//		int gcd = 987654321;
+//		
+//		if (min == 0) {
+//			return 0;
+//		}
+//		del = max / min;
+//		rest = max % min;
+//		String mellomrom1 = tallLengde(max);
+//		String mellomrom2 = tallLengde(min);
+//		String mellomrom3 = tallLengde(del);
+//		System.out.println(max + mellomrom1 + " = " + del + mellomrom3 + " * " + min + mellomrom2 + " + " + rest);
+//		
+//		inversMetode(min, rest);
+//		
+//
+//		return gcd;
+//	}
+
 	private static String tallLengde(int tall) {
 		int length = (int) (Math.log10(tall) + 1);
 		String mellomrom;
