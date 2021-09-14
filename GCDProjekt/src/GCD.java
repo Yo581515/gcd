@@ -6,8 +6,8 @@ public class GCD {
 		int a;
 		int b;
 
-		a = 2_178_309;
-		b = 3_524_578;
+//		a = 2_178_309;
+//		b = 3_524_578;
 
 //		a = 1_001_735_677;
 //		b = 1_006_662_301;
@@ -15,10 +15,12 @@ public class GCD {
 //		b = 1_009_101_133;
 //		a = 1_010_889_991;
 
-//		a = 1097;
-//		b = 65537;
+		a = 1097;
+		b = 65537;
 
-		int gcd = GCDMetode(a, b);
+		GCDMetode(a, b);
+		System.out.println("\n");
+		System.out.println(GCDMetodeRek(a, b));
 
 	}
 
@@ -47,28 +49,24 @@ public class GCD {
 		return max;
 	}
 
-//	private static int inversMetode(int a, int b) {
-//		int max = Math.max(a, b);
-//		int min = Math.min(a, b);
-//		int rest = max;
-//		int del;
-//		int gcd = 987654321;
-//		
-//		if (min == 0) {
-//			return 0;
-//		}
-//		del = max / min;
-//		rest = max % min;
-//		String mellomrom1 = tallLengde(max);
-//		String mellomrom2 = tallLengde(min);
-//		String mellomrom3 = tallLengde(del);
-//		System.out.println(max + mellomrom1 + " = " + del + mellomrom3 + " * " + min + mellomrom2 + " + " + rest);
-//		
-//		inversMetode(min, rest);
-//		
-//
-//		return gcd;
-//	}
+	private static int GCDMetodeRek(int a, int b) {
+		int max = Math.max(a, b);
+		int min = Math.min(a, b);
+		int rest = max;
+		int del;
+		if (min == 0) {
+			return 0;
+		}
+		del = max / min;
+		rest = max % min;
+		String mellomrom1 = tallLengde(max);
+		String mellomrom2 = tallLengde(min);
+		String mellomrom3 = tallLengde(del);
+		System.out.println(max + mellomrom1 + " = " + del + mellomrom3 + " * " + min + mellomrom2 + " + " + rest);
+		GCDMetodeRek(min, rest);
+
+		return 0;
+	}
 
 	private static String tallLengde(int tall) {
 		int length = (int) (Math.log10(tall) + 1);
